@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="author" content="www.pb2345.com" />
+<LINK href="{pboot:sitedomain}/skin/css/master.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="{pboot:sitedomain}/skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="{pboot:sitedomain}/skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="{pboot:sitedomain}/skin/js/nav.js"></script>
+<link type="text/css" rel="stylesheet" href="{pboot:sitedomain}/skin/css/master.css" />
+
+<!--[if IE 6]>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/png.js"></script>
+<script>DD_belatedPNG.fix('div,img,span,li,a,a:hover,dd,p,input,select')</script>
+<![endif]-->
+</head>
+
+<body>
+{include file=comm/head.html}
+<div class="con1_bg">
+  <div class="con1">
+    <div class="con1_title"> 产<br />
+      品<br />
+      分<br />
+      类 </div>
+    <ul class="con1_list">
+      {pboot:nav parent=5 num=7}
+      <li> <a href="[nav:link]" title="[nav:name]"> <img src="[nav:ico]" width="111" height="111" alt="[nav:name]" /> <span>[nav:name]</span> </a> </li>
+      {/pboot:nav}
+    </ul>
+  </div>
+</div>
+<div class="con2_bg">
+  <div class="con2">
+    <div class="notice">{label:gg}</div>
+    <div class="con2_about">
+      <div class="con2_bigbox"> {pboot:sort scode=1}
+        <p class="con2_p1">[sort:name]</p>
+        {/pboot:sort}{pboot:content id=1}
+        <div><a href="[content:link]" title="[content:title]"> [content:content drophtml=1 dropblank=1 len=442 more='...']</a></div>
+        {/pboot:content}
+        {pboot:sort scode=17}
+        <p class="con2_p2">[sort:name]</p>
+        {/pboot:sort}{pboot:content id=34}
+        <div><a href="[content:link]" title="[content:title]">[content:content drophtml=1 dropblank=1 len=442 more='...']</a></div>
+        {/pboot:content} </div>
+    </div>
+  </div>
+</div>
+{pboot:sort scode=5}
+<div class="con3_bg">
+  <div class="con3">
+    <div class="con3_title">
+      <p>[sort:name]<span></span></p>
+      <a href="[sort:link]" title="查看更多">更多>></a> </div>
+    <ul class="con3_list">
+      {pboot:list scode=[sort:scode] num=8 order=sorting}
+      <li>
+        <div> <a href="[list:link]" title="[list:title]" class="pro_img"> <img src="[list:ico]" width="220" height="170" alt="[list:title]" rel="[list:title]" /> </a>
+          <p><a href="[list:link]" title="[list:title]">[list:title]</a></p>
+        </div>
+      </li>
+      {/pboot:list}
+    </ul>
+  </div>
+</div>
+{/pboot:sort}
+<div class="con4"> 
+  {pboot:sort scode=2}
+  <div class="con4_left">
+    <div class="con4_title1">
+      <p>[sort:name]<span></span></p>
+      <a href="[sort:link]" title="查看更多">更多>></a> </div>
+    <ul class="con4_news">
+     {pboot:list scode=[sort:scode] num=6 order=sorting}
+      <li><a href="[list:link]" title="[list:title]">[list:title]</a><span>[list:date style=Y-m-d]</span></li>
+      {/pboot:list}
+    </ul>
+  </div>
+  {/pboot:sort}
+  {pboot:sort scode=4}
+  <div class="con4_right">
+    <div class="con4_title1"> 
+      <p>[sort:name]<span></span></p>
+      <a href="[sort:link]" title="查看更多">更多>></a> </div>
+    <ul class="con4_news">
+      {pboot:list scode=[sort:scode] num=6 order=sorting}
+      <li><a href="[list:link]" title="[list:title]">[list:title]</a><span>[list:date style=Y-m-d]</span></li>
+      {/pboot:list}
+    </ul>
+  </div>
+  {/pboot:sort}
+</div>
+{pboot:sort scode=8}
+<div class="con5_bg">
+  <div class="con5">
+    <div class="con4_title1">
+      <p>[sort:name]<span></span></p>
+      <a href="[sort:link]" title="查看更多">更多>></a> </div>
+    <div class="con5_box"> 
+      {pboot:list scode=[sort:scode] num=1 order=sorting}
+      <div class="con5_pic1"> <img src="[list:ico]" width="284" height="345" alt="[list:title]" />
+        <div class="black_box">
+          <p><a href="[list:link]" title="[list:title]">[list:title]</a></p>
+          <div>[list:content drophtml=1 dropblank=1 lencn=60]</div>
+        </div>
+      </div>
+      {/pboot:list} 
+      {pboot:list scode=[sort:scode] num=6 order=sorting start=2}
+      <div class="con5_pic2"> <img src="[list:ico]" width="229" height="172" alt="[list:title]" />
+        <div class="black_box">
+          <p><a href="[list:link]" title="[list:title]">[list:title]</a></p>
+          <div>[list:content drophtml=1 dropblank=1 lencn=60]</div>
+        </div>
+      </div>
+      {/pboot:list} </div>
+  </div>
+</div>
+{/pboot:sort}
+{include file=comm/foot.html} 
+</body>
+</html>

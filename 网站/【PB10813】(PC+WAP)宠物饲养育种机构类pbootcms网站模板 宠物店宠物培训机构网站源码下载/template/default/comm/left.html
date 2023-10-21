@@ -1,0 +1,35 @@
+<div class="left">
+  {pboot:sort scode=5}
+  <p class="left_title1">[sort:name]</p>
+  <ul class="left_nav">
+    {pboot:nav parent={sort:tcode} parent=5 num=50}
+    <li><a href="[nav:link]" >[nav:name]</a> </li>
+    {/pboot:nav}
+  </ul>
+  {/pboot:sort}
+  {pboot:sort scode=2}
+  <p class="left_title1">[sort:name]</p>
+  <div class="left_news">
+    <ul>
+      {pboot:list scode=[sort:scode] num=5 order=sorting}
+      <li><a href="[list:link]" title="[list:title]">[list:title]</a> </li>
+      {/pboot:list}
+    </ul>
+    <img src="{pboot:sitedomain}/skin/img/leftnews.png" /> </div>
+    {/pboot:sort}
+  <p class="left_title2">联系我们</p>
+  <ul class="left_contact">
+    <li> <span>电话：</span>
+      <p>{pboot:companyphone}</p>
+    </li>
+    <li> <span>地址：</span>
+      <p>{pboot:companyaddress} </p>
+    </li>
+    <li> <span>QQ：</span>
+      <p>{pboot:companyqq}</p>
+    </li>
+    <li> <span>邮箱：</span>
+      <p>{pboot:companyemail}</p>
+    </li>
+  </ul>
+</div>

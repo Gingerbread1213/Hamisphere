@@ -1,0 +1,31 @@
+<div class="footer">
+    <div class="foot foot-relative" id="foot">
+      <div class="foot-relative"> 
+      <a href="{pboot:sitedomain}/" class="cbtn-share common-search-btn" title="首页"> <span class="commonfont">&#xe608;</span>
+        <h3>首页</h3>
+        </a>
+        <a href="tel:{pboot:companyphone}" title="电话"> <span class="commonfont">&#xe604;</span>
+        <h3>电话</h3>
+        </a>
+        {pboot:sort scode=11}
+        <a href="[list:link]" title="联系"> <span class="commonfont">&#xe605;</span>
+        <h3>联系</h3>
+        </a>
+        {/pboot:sort}
+        </div>
+    </div>
+  </div>
+    <div class="share"> 
+    <!--百度分享-->
+    <div class="bdsharebuttonbox" data-tag="share_2" style="width: 190px;margin: 0.5rem auto;"> <a href="#" class="bds_qzone" data-cmd="qzone"></a> <a href="#" class="bds_tsina" data-cmd="tsina"></a> <a href="#" class="bds_baidu" data-cmd="baidu"></a> <a href="#" class="bds_tqq" data-cmd="tqq"></a> <a  href="#" class="bds_renren" data-cmd="renren"></a> <a href="" class="bds_weixin" data-cmd="weixin"></a> </div>
+    <script>
+	$(".cbtn-share").click(function(){$(".share").slideToggle(300)});   // 分享
+	window._bd_share_config = {
+		share : [{
+			"bdSize" : 32
+		}],
+	}
+	with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js'];
+</script> 
+    <!--百度分享--> 
+  </div>

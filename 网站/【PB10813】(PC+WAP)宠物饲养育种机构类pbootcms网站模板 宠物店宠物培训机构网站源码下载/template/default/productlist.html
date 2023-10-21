@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<LINK href="{pboot:sitedomain}/skin/css/master.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="{pboot:sitedomain}/skin/js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="{pboot:sitedomain}/skin/js/search.js"></script>
+<script language="JavaScript" type="text/javascript" src="{pboot:sitedomain}/skin/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="{pboot:sitedomain}/skin/js/nav.js"></script>
+<link type="text/css" rel="stylesheet" href="{pboot:sitedomain}/skin/css/master.css" />
+
+<!--[if IE 6]>
+<script type="text/javascript" src="{pboot:sitedomain}/skin/js/png.js"></script>
+<script>DD_belatedPNG.fix('div,img,span,li,a,a:hover,dd,p,input,select')</script>
+<![endif]-->
+</head>
+
+<body>
+{include file=comm/head.html}
+<div class="content"> {include file=comm/left.html}
+  <div class="right">
+    <div class="right_title"> <span class="right_name">{sort:name}</span>
+      <p>当前位置：{pboot:position separator='>'}</p>
+    </div>
+    <div class="right_con">
+      <ul class="con3_list product">
+        {pboot:list num=9 order=sorting}
+        <li>
+          <div> <a href="[list:link]" title="[list:title]" class="pro_img"> <img src="[list:ico]" width="220" height="170" alt="[list:title]" rel="[list:title]" /> </a>
+            <p><a href="[list:link]" title="[list:title]">[list:title]</a></p>
+          </div>
+        </li>
+        {/pboot:list}
+      </ul>
+      <div class="">
+        {include file=comm/page.html}
+      </div>
+    </div>
+  </div>
+</div>
+{include file=comm/foot.html}
+</body>
+</html>

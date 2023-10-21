@@ -1,0 +1,19 @@
+<div class="foot_bg">
+  <div class="foot">
+    <div class="search">
+      <form method="post" action="{pboot:scaction}"  name="formsearch">
+        <input type="text" class="text pngFix" value="请输入搜索关键词！" name="keyword" id="q" onfocus="this.value=''" onblur="if(!value){value=defaultValue}"  />
+        <input type="submit" title="搜索" class="btn pngFix" value=""/>
+      </form>
+      <script src="{pboot:sitetplpath}/skin/js/jqselect.js" type=text/javascript></SCRIPT> 
+    </div>
+    <p> <span>地址：{pboot:companyaddress} </span> <span>版权所有：{pboot:sitecopyright}</span> </p>
+    <p> <a href="{pboot:sitedomain}/sitemap.xml" target="_blank">XML地图</a> <span>技术支持：<a href="https://www.pb2345.com" target="_blank" title="PB2345模板网">pbootcms模板</a></span> <span><a href="https://beian.miit.gov.cn/" title="{pboot:siteicp}" target="_blank" rel="nofollow">{pboot:siteicp}</a></span> {pboot:sitestatistical}</p>
+    <div class="sweep"> <img src="{pboot:companyweixin}" width="111" height="111" />
+      <p>扫一扫，加关注</p>
+    </div>
+  </div>
+</div>
+<div class="links_bg">
+  <div class="links"> <span>友情链接&nbsp;：</span> {pboot:link  gid=1 num=100} <a href="[link:link]" title="[link:name]">[link:name]</a> {/pboot:link}</div>
+</div>

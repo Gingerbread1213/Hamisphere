@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<title>{pboot:if('{sort:title}'=='')}{pboot:pagetitle}{else}{sort:title}{/pboot:if}</title>
+<meta name="keywords" content="{pboot:if('{sort:keywords}'=='')}{pboot:pagekeywords}{else}{sort:keywords}{/pboot:if}">
+<meta name="description" content="{pboot:if('{sort:description}'=='')}{pboot:pagedescription}{else}{sort:description}{/pboot:if}">
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/m/css/master.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/m/css/subpage.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/m/css/child_vip.css" />
+<script type="text/javascript" src="{pboot:sitedomain}/m/js/jquery.js"></script>
+<style>
+.head {
+	background: #0b4400
+}
+.foot {
+	background: #0b4400;
+	position: fixed;
+	bottom: 0;
+}
+.nav {
+	background: #0b4400
+}
+.nav_color {
+	background: #0b4400
+}
+</style>
+<script type="text/javascript" src="{pboot:sitedomain}/m/js/nav.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/m/js/cart_icon.js"></script>
+</head>
+
+<body>
+{include file=comm/head.html}
+<div class="allpage">
+  <div class="black-fixed iconfont">&#xe60f;</div>
+  <div class="header">
+    <div class="head"> <a href="{pboot:sitedomain}/" title="首页" class="home-btn commonfont">&#xe608;</a>
+      <p class="top-title">{sort:name}</p>
+      <div none>
+        <div class="class-btn"><span class="commonfont">&#xe60a;</span>分类</div>
+      </div>
+      <div class="nav-btn commonfont">&#xe60b;</div>
+    </div>
+    <div class="type">
+      <h1>分类：</h1>
+      <ul>
+        {pboot:nav num=50 parent={sort:tcode}}
+        <li> <a href="[nav:link]" >[nav:name]</a> <span class="commonfont class-down">&#xe60c;</span>
+          <dl>
+          </dl>
+        </li>
+        {/pboot:nav}
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <ul class="common_news" id="contentArea">
+      {pboot:list num=10 order=sorting}
+      <li class="news4"> <a href="[list:link]" title="[list:title]"> <img src="[list:ico]" alt="[list:title]"> <span>[list:title]</span> </a> </li>
+      {/pboot:list}
+    </ul>
+    <div class="pagess">
+      <ul>
+        {include file=comm/page.html}
+      </ul>
+    </div>
+  </div>
+  {include file=comm/foot.html} </div>
+</body>
+</html>

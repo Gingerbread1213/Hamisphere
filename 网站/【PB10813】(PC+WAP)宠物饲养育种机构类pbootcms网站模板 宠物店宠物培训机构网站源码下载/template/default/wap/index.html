@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta content="telephone=no" name="format-detection" />
+<title>{pboot:sitetitle}</title>
+<meta name="keywords" content="{pboot:sitekeywords}">
+<meta name="description" content="{pboot:sitedescription}">
+<meta name="author" content="www.pb2345.com" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/m/css/master.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/m/css/subpage.css" />
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/m/css/child_vip.css" />
+<script type="text/javascript" src="{pboot:sitedomain}/m/js/jquery.js"></script>
+<style>
+.head {
+	background: #0b4400
+}
+.foot {
+	background: #0b4400;
+	position: fixed;
+	bottom: 0;
+}
+.nav {
+	background: #0b4400
+}
+.nav_color {
+	background: #0b4400
+}
+</style>
+<link rel="stylesheet" type="text/css" href="{pboot:sitedomain}/m/css/swiper.css" />
+<script type="text/javascript" src="{pboot:sitedomain}/m/js/nav.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/m/js/cart_icon.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/m/js/swiper.js"></script>
+<script type="text/javascript" src="{pboot:sitedomain}/m/js/lihe.js"></script>
+</head>
+<body>
+{include file=comm/head.html}
+<div class="allpage">
+  <div class="black-fixed iconfont">&#xe60f;</div>
+  <div class="header">
+    <div class="head"> <a href="{pboot:sitedomain}/" title="{pboot:companyname}" class="logo"> <img src="{pboot:sitelogo}" alt="{pboot:companyname}" height="50"/> </a>
+      <div class="nav-btn iconfont">&#xe605;</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="d_menu"> {pboot:nav parent=0} <a href="[nav:link]" title="[nav:name]">[nav:name]</a> {/pboot:nav}
+      <div class="clear"></div>
+    </div>
+    <div class="banner">
+      <div class="swiper-container">
+        <div class="swiper-wrapper"> 
+          {pboot:slide num=10 gid=1}
+          <div class="swiper-slide"><img src="[slide:src]"></div>
+          {/pboot:slide} </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+    {pboot:sort scode=5}
+    <div class="common_title">
+      <h2>[sort:name]</h2>
+    </div>
+    <div class="index_case">
+      <ul>
+        {pboot:list scode=[sort:scode] num=4 order=sorting}
+        <li> <a href="[list:link]"><img src="[list:ico]" alt="[list:title]"></a>
+          <h3>[list:title]</h3>
+         
+          <a href="[list:link]" title="查看详情">查看详情</a> </li>
+        {/pboot:list}
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <div class="more_i m2"><a href="[sort:link]" title="查看更多>>">查看更多>></a></div>
+    {/pboot:sort}
+    
+    {pboot:sort scode=2}
+    <div class="common_title">
+      <h2>[sort:name]</h2>
+    </div>
+    <div class="new_i">
+      <ul>
+        {pboot:list scode=[sort:scode] num=4 order=sorting}
+        <li><a href="[list:link]" title="[list:title]"><span>[list:title]</span></a></li>
+        {/pboot:list}
+      </ul>
+    </div>
+    <div class="more_i"><a href="[sort:link]" title="查看更多>>">查看更多>></a></div>
+    {/pboot:sort}
+    
+    {pboot:sort scode=8}
+    <div class="common_title">
+      <h2>[sort:name]</h2>
+    </div>
+    <div class="index_img2"> {pboot:list scode=[sort:scode] num=4 order=sorting} <a href="[list:link]"><img src="[list:ico]" alt="[list:title]"></a> {/pboot:list}
+      <div class="clear"></div>
+    </div>
+    <div class="more_i"><a href="[sort:link]" title="查看更多>>">查看更多>></a></div>
+    {/pboot:sort}
+    
+    
+    {pboot:sort scode=1}
+    <div class="common_title">
+      <h2>[sort:name]</h2>
+    </div>
+    {/pboot:sort}
+    <div class="about_i_c"> {pboot:content id=1} [content:content drophtml=1 dropblank=1 len=200 more='...']   {/pboot:content} </div>
+    
+    <!--hot line start-->
+    <div class="hotline"> <a href="tel:{pboot:companyphone}" class="tel_number">{pboot:companyphone}</a><br>
+      地址：{pboot:companyaddress}<br>
+      邮箱：{pboot:companyemail} </div>
+    <!--hot line end --> 
+    <!--点击回上部 start-->
+    <div class="cbtn-top" style="display: block;"><a href="javascript:window.scroll(0,0);"><img src="{pboot:sitedomain}/m/img/gotop.png"></a></div>
+    <div class="beian"> 技术支持：<a title="网站模板" target="_blank" href="https://www.pb2345.com/">PB2345模板网</a> </div>
+  </div>
+  {include file=comm/foot.html} </div>
+</body>
+</html>
